@@ -1,0 +1,37 @@
+1 Установка docker-compose
+
+#ставим курл
+sudo apt -y install curl
+#скачиваем докер
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.4.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#разрешаем запуск докер
+sudo chmod +x /usr/local/bin/docker-compose
+
+ 2  Создаем конфиг файл
+#называть нужно docker-compose.yml
+
+cd /home #переходим в home
+Пример конфига docker-compose.yml для одо
+
+#создаем и редактируем файл
+
+nano docker-compose.yml 
+
+
+
+
+docker-compose up -d # запускаем то что насочиняли  !!!!ключ -d значит что контейнер запустится и будет работать!!!!
+
+
+полезные команды
+1 docker ps -a
+смотреть запущенные образы
+
+2 docker-compose restart 
+перезапускать запущенные образы
+
+3 docker-compose down
+выключать запущенные образы
+
+4 docker-compose up -d
+запустить конфиг docker-compose.yml
